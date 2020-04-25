@@ -26,6 +26,8 @@ module.exports = {
         use: [
           // style-loader
           { loader: 'style-loader' },
+          // css-modules-typescript-loader
+          { loader: 'css-modules-typescript-loader' },
           // css-loader
           {
             loader: 'css-loader',
