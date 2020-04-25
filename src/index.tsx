@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import reactDOM from 'react-dom'
+import styles from './index.scss'
 
 const App: FunctionComponent = () => {
   return (
-    <div>Belial's Blog</div>
+    <div className={styles.color}>Belial's Blog</div>
   )
 }
 

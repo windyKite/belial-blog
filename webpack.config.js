@@ -20,6 +20,22 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          // style-loader
+          { loader: 'style-loader' },
+          // css-loader
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
+          // sass-loader
+          { loader: 'sass-loader' }
+        ]
       }
     ]
   }
