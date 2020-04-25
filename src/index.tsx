@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { render } from 'react-dom'
+import reactDOM from 'react-dom'
 
 const App: FunctionComponent = () => {
   return (
@@ -7,4 +7,4 @@ const App: FunctionComponent = () => {
   )
 }
 
-render(<App/>, document.getElementById('#app'))
+reactDOM.render(<App/>, document.getElementById('app'))
