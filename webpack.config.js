@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
+    RHLpatch: 'react-hot-loader/patch',
     app: path.resolve(__dirname, 'src/index.tsx')
   }, // webpack 构建的起点文件
   output: {
@@ -22,7 +23,8 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist')
+    contentBase: path.resolve(__dirname, 'dist'),
+    hot: true
   },
   module: {
     rules: [

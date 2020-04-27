@@ -1,15 +1,23 @@
-import React, { FunctionComponent } from 'react'
-import reactDOM from 'react-dom'
-import styles from './index.scss'
-import { Button } from 'antd';
+import 'react-hot-loader/patch';
+import React, { FunctionComponent, ReactElement } from 'react'
+import ReactDOM from 'react-dom'
 
-const App: FunctionComponent = () => {
-  return (
-    <div className={styles.color}>
-      <p>Belial's Blog</p> 
-      <Button type="primary">antd button</Button> 
-    </div>
-  )
+import { AppContainer } from 'react-hot-loader';
+import App from './app.tsx'
+
+const render = (Component: FunctionComponent) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('app')
+  );
 }
 
-reactDOM.render(<App/>, document.getElementById('app'))
+render(App)
+
+if(module.hot){
+  module.hot.accept('./app.tsx', () => {
+    render(App)
+  })
+}
