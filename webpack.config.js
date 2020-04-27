@@ -26,7 +26,7 @@ module.exports = {
         use: [
           // style-loader
           { loader: 'style-loader' },
-          // css-modules-typescript-loader
+          // css-modules-typescript-loader, 自动生成 scss 文件的 typescrypt 声明
           { loader: 'css-modules-typescript-loader' },
           // css-loader
           {
