@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 /**
  * @type {import('webpack').Configuration}
@@ -12,6 +13,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Belial\'s Blog',
+      // Load a custom template (lodash by default)
+      template: 'index.html'
+    })
+  ],
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, 'dist')
