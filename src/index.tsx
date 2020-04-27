@@ -3,7 +3,7 @@ import React, { FunctionComponent, ReactElement } from 'react'
 import ReactDOM from 'react-dom'
 
 import { AppContainer } from 'react-hot-loader';
-import App from './app.tsx'
+import App from './app'
 
 const render = (Component: FunctionComponent) => {
   ReactDOM.render(
@@ -17,7 +17,7 @@ const render = (Component: FunctionComponent) => {
 render(App)
 
 if(module.hot){
-  module.hot.accept('./app.tsx', () => {
+  module.hot.accept('./app', () => {
     render(App)
   })
 }

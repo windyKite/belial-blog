@@ -26,6 +26,9 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   module: {
     rules: [
       {

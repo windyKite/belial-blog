@@ -1,7 +1,7 @@
 import React ,{ FunctionComponent } from 'react'
 import styles from './index.scss'
 import { Button } from 'antd';
-import Add from './Add.tsx'
+import Add from './Add'
 
 const App: FunctionComponent = () => {
   return (
